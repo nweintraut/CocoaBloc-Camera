@@ -16,6 +16,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
+  s.dependency 'pop'
+  s.dependency 'ReactiveCocoa'
+  s.dependency 'PureLayout'
+
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
     'CocoaBloc-Camera' => ['Pod/Assets/*.png']
