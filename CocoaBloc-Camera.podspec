@@ -1,28 +1,17 @@
-#
-# Be sure to run `pod lib lint CocoaBloc-Camera.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# Any lines starting with a # are optional, but encouraged
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "CocoaBloc-Camera"
   s.version          = "0.1.0"
-  s.summary          = "A short description of CocoaBloc-Camera."
-  s.description      = <<-DESC
-                       An optional longer description of CocoaBloc-Camera
+  s.summary          = "StageBloc's iOS camera components"
+  s.description      = "An iOS UI framework for StageBloc photo/video composition"
+  s.homepage         = "https://github.com/stagebloc/CocoaBloc-Camera"
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/CocoaBloc-Camera"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "John Heaton" => "jheaton.dev@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/CocoaBloc-Camera.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.authors = {   'John Heaton'   => 'pikachu@stagebloc.com',
+                  'Mark Glagola'  => 'mark@stagebloc.com',
+                  'David Warner'  => 'spiderman@stagebloc.com',
+                  'Josh Holat'    => 'bumblebee@stagebloc.com' }
+  s.source  = { :git => "https://github.com/stagebloc/CocoaBloc-Camera.git" }
+  s.social_media_url = 'https://twitter.com/stagebloc'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
