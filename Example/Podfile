@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'CocoaBloc-Camera', :exclusive => true do
+  pod "CocoaBloc-Camera", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "CocoaBloc-Camera", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+end
