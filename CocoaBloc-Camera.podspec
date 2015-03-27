@@ -21,6 +21,7 @@ Pod::Spec.new do |s|
   s.dependency 'PureLayout'
 
   s.source_files = 'Pod/Classes/**/*'
+  s.private_header_files = "Pod/Classes/{Misc,Views}/*.h"
   s.resource_bundles = {
     'CocoaBloc-Camera' => ['Pod/Assets/*.png']
   }
