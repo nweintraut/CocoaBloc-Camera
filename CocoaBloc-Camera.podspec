@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "CocoaBloc-Camera"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "StageBloc's iOS camera components"
   s.description      = "An iOS UI framework for StageBloc photo/video composition"
   s.homepage         = "https://github.com/stagebloc/CocoaBloc-Camera"
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                   'Mark Glagola'  => 'mark@stagebloc.com',
                   'David Warner'  => 'spiderman@stagebloc.com',
                   'Josh Holat'    => 'bumblebee@stagebloc.com' }
-  s.source  = { :git => "https://github.com/stagebloc/CocoaBloc-Camera.git", :tag => "0.1.0" }
+  s.source  = { :git => "https://github.com/stagebloc/CocoaBloc-Camera.git", :tag => "0.1.1" }
   s.social_media_url = 'https://twitter.com/stagebloc'
 
   s.platform     = :ios, '7.0'
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.dependency 'CocoaBloc-UI'
 
   s.source_files = 'Pod/Classes/**/*'
-  s.private_header_files = "Pod/Classes/{Misc,Views}/*.h"
+  s.private_header_files = "Pod/Classes/Misc/*.h"
   s.resource_bundles = {
     'CocoaBloc-Camera' => ['Pod/Assets/*.png']
   }

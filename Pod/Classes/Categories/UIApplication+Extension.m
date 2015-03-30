@@ -11,7 +11,7 @@
 @implementation UIApplication (Extension)
 
 + (BOOL) canOpenSettings {
-    return (&UIApplicationOpenSettingsURLString != NULL);
+    return (UIApplicationOpenSettingsURLString != NULL);
 }
 
 - (BOOL) openSettings {
