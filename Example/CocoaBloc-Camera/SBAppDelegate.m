@@ -7,12 +7,14 @@
 //
 
 #import "SBAppDelegate.h"
+#import <CocoaBloc-Camera/SBCaptureViewController.h>
 
 @implementation SBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window.rootViewController = [[SBCaptureViewController alloc] initWithInitialCaptureType:SBCaptureTypePhoto];
+    
     return YES;
 }
 							
