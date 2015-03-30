@@ -42,7 +42,6 @@
 		0943C6B01AC352CB006CF9E9 /* SBVideoReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C68D1AC352CB006CF9E9 /* SBVideoReviewView.m */; };
 		0943C6B11AC352CB006CF9E9 /* UIDevice+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C68F1AC352CB006CF9E9 /* UIDevice+Orientation.m */; };
 		0943C6B51AC35378006CF9E9 /* SBDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6B41AC35378006CF9E9 /* SBDraggableView.m */; };
-		0943C6B91AC3539F006CF9E9 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6B81AC3539F006CF9E9 /* UIView+Extension.m */; };
 		0943C6BC1AC353B7006CF9E9 /* UIColor+CocoaBloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6BB1AC353B7006CF9E9 /* UIColor+CocoaBloc.m */; };
 		0943C6BF1AC353EE006CF9E9 /* SBCaptionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6BE1AC353EE006CF9E9 /* SBCaptionButton.m */; };
 		0943C6C21AC35402006CF9E9 /* SBImageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6C11AC35402006CF9E9 /* SBImageControl.m */; };
@@ -469,7 +468,6 @@
 				0943C6B51AC35378006CF9E9 /* SBDraggableView.m in Sources */,
 				0943C6BF1AC353EE006CF9E9 /* SBCaptionButton.m in Sources */,
 				0943C6DE1AC354B2006CF9E9 /* SBPushAnimator.m in Sources */,
-				0943C6B91AC3539F006CF9E9 /* UIView+Extension.m in Sources */,
 				0943C6991AC352CB006CF9E9 /* SBAssetGroup.m in Sources */,
 				0943C6951AC352CB006CF9E9 /* NSUserDefaults+Camera.m in Sources */,
 				0943C6AF1AC352CB006CF9E9 /* SBVideoManager.m in Sources */,

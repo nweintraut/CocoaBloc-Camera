@@ -8,7 +8,6 @@
 
 #import "SBCameraAccessViewController.h"
 #import "UIFont+CocoaBloc.h"
-#import "UIView+Extension.h"
 #import "UIDevice+CocoaBloc.h"
 #import "UIApplication+Extension.h"
 
@@ -109,7 +108,7 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.toolbar];
-    [self.toolbar autoCenterInSuperviewWithMatchedDimensions];
+    [self.toolbar autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     
     CGSize size = CGSizeMake(280, [UIApplication canOpenSettings] ? 20 : 50);
     if (self.detailsButton) {

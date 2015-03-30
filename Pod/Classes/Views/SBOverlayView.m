@@ -12,7 +12,6 @@
 #import <PureLayout/PureLayout.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
-#import "UIView+Extension.h"
 #import "UIDevice+CocoaBloc.h"
 
 @interface SBOverlayView ()
@@ -97,7 +96,7 @@
     [self.overlayConstraints autoRemoveConstraints];
     NSMutableArray *constraints = [NSMutableArray array];
     
-    [constraints addObjectsFromArray:[self.overlayToolbar autoCenterInSuperviewWithMatchedDimensions]];
+    [constraints addObjectsFromArray:[self.overlayToolbar autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero]];
     
     [constraints addObjectsFromArray:[self.activityIndicatorView autoCenterInSuperview]];
     [constraints addObjectsFromArray:[self.activityIndicatorView autoSetDimensionsToSize:CGSizeMake(30, 30)]];
@@ -127,7 +126,7 @@
 + (instancetype) showInView:(UIView*)superview text:(NSString*)text dismissOnTap:(BOOL)dismissOnTap duration:(NSTimeInterval)duration {
     SBOverlayView *view = [[SBOverlayView alloc] initWithFrame:superview.frame text:text];
     [superview addSubview:view];
-    view.showConstraints = [view autoCenterInSuperviewWithMatchedDimensions];
+    view.showConstraints = [view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     view.showDuration = duration;
     [view animateShowWithDuration:duration showDismissDialog:dismissOnTap completion:nil];
     return view;

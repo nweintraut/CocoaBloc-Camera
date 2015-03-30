@@ -7,7 +7,6 @@
 //
 
 #import "SBImageControl.h"
-#import "UIView+Extension.h"
 
 #import <PureLayout/PureLayout.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
@@ -19,7 +18,14 @@
     _imageView = [[UIImageView alloc] init];
     _imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self addSubview:_imageView];
-    [self.imageView autoCenterInSuperviewWithMatchedDimensions];
+    
+    [self.imageView autoCenterInSuperview];
+    [self.imageView autoMatchDimension:ALDimensionWidth
+                           toDimension:ALDimensionWidth
+                                ofView:self.imageView.superview];
+    [self.imageView autoMatchDimension:ALDimensionHeight
+                           toDimension:ALDimensionHeight
+                                ofView:self.imageView.superview];
     
     CAGradientLayer *maskLayer = [CAGradientLayer layer];
     maskLayer.anchorPoint = CGPointZero;

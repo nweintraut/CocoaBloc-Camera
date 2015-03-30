@@ -8,7 +8,6 @@
 
 #import "SBCaptionButton.h"
 #import "UIFont+CocoaBloc.h"
-#import "UIView+Extension.h"
 
 #import <PureLayout/PureLayout.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>

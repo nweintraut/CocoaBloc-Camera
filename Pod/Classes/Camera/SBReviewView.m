@@ -10,7 +10,6 @@
 #import <PureLayout/PureLayout.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
-#import "UIView+Extension.h"
 #import "SBCaptionButton.h"
 #import "SBOptionsChevronButton.h"
 
@@ -184,10 +183,26 @@ static CGFloat const kAnimationVelocity = 0.5f;
         [self.textContainerView addSubview:self.toolBarDescriptionField];
 
         [self.toolBarTitleField addSubview:self.titleField];
-        [self.titleField autoCenterInSuperviewWithMatchedDimensions];
+        
+        [self.titleField autoCenterInSuperview];
+        [self.titleField autoMatchDimension:ALDimensionWidth
+                                toDimension:ALDimensionWidth
+                                     ofView:self.titleField.superview];
+        [self.titleField autoMatchDimension:ALDimensionHeight
+                                toDimension:ALDimensionHeight
+                                     ofView:self.titleField.superview];
+        
         
         [self.toolBarDescriptionField addSubview:self.descriptionField];
-        [self.descriptionField autoCenterInSuperviewWithMatchedDimensions];
+        
+        [self.descriptionField autoCenterInSuperview];
+        [self.descriptionField autoMatchDimension:ALDimensionWidth
+                                      toDimension:ALDimensionWidth
+                                           ofView:self.descriptionField.superview];
+        [self.descriptionField autoMatchDimension:ALDimensionHeight
+                                      toDimension:ALDimensionHeight
+                                           ofView:self.descriptionField.superview];
+
 
         [self adjustToolBarConstraints:SBTextFieldLayoutHidden];
         
