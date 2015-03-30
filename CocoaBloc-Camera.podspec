@@ -20,6 +20,8 @@ Pod::Spec.new do |s|
   s.dependency 'ReactiveCocoa'
   s.dependency 'PureLayout'
 
+  s.dependency 'CocoaBloc-UI'
+
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
     'CocoaBloc-Camera' => ['Pod/Assets/*.png']
