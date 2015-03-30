@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description      = "An iOS UI framework for StageBloc photo/video composition"
   s.homepage         = "https://github.com/stagebloc/CocoaBloc-Camera"
 
-  s.license          = 'MIT'
+  s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.authors = {   'John Heaton'   => 'pikachu@stagebloc.com',
                   'Mark Glagola'  => 'mark@stagebloc.com',
                   'David Warner'  => 'spiderman@stagebloc.com',
