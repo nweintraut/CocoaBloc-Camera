@@ -31,3 +31,5 @@ DerivedData
 #
 Pods/
 Podfile.lock
+Example/Pods
+Example/Podfile.lock
