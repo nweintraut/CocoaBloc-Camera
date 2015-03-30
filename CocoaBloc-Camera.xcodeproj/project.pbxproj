@@ -42,11 +42,8 @@
 		0943C6B01AC352CB006CF9E9 /* SBVideoReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C68D1AC352CB006CF9E9 /* SBVideoReviewView.m */; };
 		0943C6B11AC352CB006CF9E9 /* UIDevice+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C68F1AC352CB006CF9E9 /* UIDevice+Orientation.m */; };
 		0943C6B51AC35378006CF9E9 /* SBDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6B41AC35378006CF9E9 /* SBDraggableView.m */; };
-		0943C6B91AC3539F006CF9E9 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6B81AC3539F006CF9E9 /* UIView+Extension.m */; };
-		0943C6BC1AC353B7006CF9E9 /* UIColor+CocoaBloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6BB1AC353B7006CF9E9 /* UIColor+CocoaBloc.m */; };
 		0943C6BF1AC353EE006CF9E9 /* SBCaptionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6BE1AC353EE006CF9E9 /* SBCaptionButton.m */; };
 		0943C6C21AC35402006CF9E9 /* SBImageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6C11AC35402006CF9E9 /* SBImageControl.m */; };
-		0943C6C51AC3541D006CF9E9 /* UIFont+CocoaBloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6C41AC3541D006CF9E9 /* UIFont+CocoaBloc.m */; };
 		0943C6C81AC35435006CF9E9 /* UIDevice+CocoaBloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6C71AC35435006CF9E9 /* UIDevice+CocoaBloc.m */; };
 		0943C6CB1AC35443006CF9E9 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6CA1AC35443006CF9E9 /* UIImage+Resize.m */; };
 		0943C6CE1AC35459006CF9E9 /* UIApplication+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C6CD1AC35459006CF9E9 /* UIApplication+Extension.m */; };
@@ -142,16 +139,10 @@
 		0943C68F1AC352CB006CF9E9 /* UIDevice+Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Orientation.m"; sourceTree = "<group>"; };
 		0943C6B31AC35378006CF9E9 /* SBDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDraggableView.h; sourceTree = "<group>"; };
 		0943C6B41AC35378006CF9E9 /* SBDraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDraggableView.m; sourceTree = "<group>"; };
-		0943C6B71AC3539F006CF9E9 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		0943C6B81AC3539F006CF9E9 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		0943C6BA1AC353B7006CF9E9 /* UIColor+CocoaBloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CocoaBloc.h"; sourceTree = "<group>"; };
-		0943C6BB1AC353B7006CF9E9 /* UIColor+CocoaBloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CocoaBloc.m"; sourceTree = "<group>"; };
 		0943C6BD1AC353EE006CF9E9 /* SBCaptionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCaptionButton.h; sourceTree = "<group>"; };
 		0943C6BE1AC353EE006CF9E9 /* SBCaptionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCaptionButton.m; sourceTree = "<group>"; };
 		0943C6C01AC35402006CF9E9 /* SBImageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBImageControl.h; sourceTree = "<group>"; };
 		0943C6C11AC35402006CF9E9 /* SBImageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBImageControl.m; sourceTree = "<group>"; };
-		0943C6C31AC3541D006CF9E9 /* UIFont+CocoaBloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CocoaBloc.h"; sourceTree = "<group>"; };
-		0943C6C41AC3541D006CF9E9 /* UIFont+CocoaBloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CocoaBloc.m"; sourceTree = "<group>"; };
 		0943C6C61AC35435006CF9E9 /* UIDevice+CocoaBloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CocoaBloc.h"; sourceTree = "<group>"; };
 		0943C6C71AC35435006CF9E9 /* UIDevice+CocoaBloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CocoaBloc.m"; sourceTree = "<group>"; };
 		0943C6C91AC35443006CF9E9 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -308,12 +299,6 @@
 				0943C6CA1AC35443006CF9E9 /* UIImage+Resize.m */,
 				0943C6C61AC35435006CF9E9 /* UIDevice+CocoaBloc.h */,
 				0943C6C71AC35435006CF9E9 /* UIDevice+CocoaBloc.m */,
-				0943C6C31AC3541D006CF9E9 /* UIFont+CocoaBloc.h */,
-				0943C6C41AC3541D006CF9E9 /* UIFont+CocoaBloc.m */,
-				0943C6BA1AC353B7006CF9E9 /* UIColor+CocoaBloc.h */,
-				0943C6BB1AC353B7006CF9E9 /* UIColor+CocoaBloc.m */,
-				0943C6B71AC3539F006CF9E9 /* UIView+Extension.h */,
-				0943C6B81AC3539F006CF9E9 /* UIView+Extension.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -455,7 +440,6 @@
 				0943C6AC1AC352CB006CF9E9 /* SBRecordButton.m in Sources */,
 				0943C6911AC352CB006CF9E9 /* AVAssetExportSession+Extension.m in Sources */,
 				0943C69C1AC352CB006CF9E9 /* SBBottomViewContrainer.m in Sources */,
-				0943C6C51AC3541D006CF9E9 /* UIFont+CocoaBloc.m in Sources */,
 				0943C6AE1AC352CB006CF9E9 /* SBReviewView.m in Sources */,
 				0943C6971AC352CB006CF9E9 /* SBAlbumTableViewCell.m in Sources */,
 				0943C6A81AC352CB006CF9E9 /* SBPhotoCollectionViewCell.m in Sources */,
@@ -463,13 +447,11 @@
 				0943C69B1AC352CB006CF9E9 /* SBAssetStitcher.m in Sources */,
 				0943C6B01AC352CB006CF9E9 /* SBVideoReviewView.m in Sources */,
 				0943C6AA1AC352CB006CF9E9 /* SBPhotoReviewView.m in Sources */,
-				0943C6BC1AC353B7006CF9E9 /* UIColor+CocoaBloc.m in Sources */,
 				0943C6AB1AC352CB006CF9E9 /* SBProgressBar.m in Sources */,
 				0943C6D81AC35497006CF9E9 /* SBMarginAnimator.m in Sources */,
 				0943C6B51AC35378006CF9E9 /* SBDraggableView.m in Sources */,
 				0943C6BF1AC353EE006CF9E9 /* SBCaptionButton.m in Sources */,
 				0943C6DE1AC354B2006CF9E9 /* SBPushAnimator.m in Sources */,
-				0943C6B91AC3539F006CF9E9 /* UIView+Extension.m in Sources */,
 				0943C6991AC352CB006CF9E9 /* SBAssetGroup.m in Sources */,
 				0943C6951AC352CB006CF9E9 /* NSUserDefaults+Camera.m in Sources */,
 				0943C6AF1AC352CB006CF9E9 /* SBVideoManager.m in Sources */,

@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                   'Mark Glagola'  => 'mark@stagebloc.com',
                   'David Warner'  => 'spiderman@stagebloc.com',
                   'Josh Holat'    => 'bumblebee@stagebloc.com' }
-  s.source  = { :git => "https://github.com/stagebloc/CocoaBloc-Camera.git" }
+  s.source  = { :git => "https://github.com/stagebloc/CocoaBloc-Camera.git", :tag => "0.1.0" }
   s.social_media_url = 'https://twitter.com/stagebloc'
 
   s.platform     = :ios, '7.0'
@@ -19,6 +19,8 @@ Pod::Spec.new do |s|
   s.dependency 'pop'
   s.dependency 'ReactiveCocoa'
   s.dependency 'PureLayout'
+
+  s.dependency 'CocoaBloc-UI'
 
   s.source_files = 'Pod/Classes/**/*'
   s.private_header_files = "Pod/Classes/{Misc,Views}/*.h"

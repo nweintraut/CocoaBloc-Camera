@@ -13,7 +13,6 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
 #import "SBAsset.h"
-#import "UIView+Extension.h"
 
 #import "SBPhotoReviewView.h"
 #import "SBVideoReviewView.h"
@@ -74,7 +73,7 @@
     }
     
     [self.view addSubview:self.reviewView];
-    [self.reviewView autoCenterInSuperviewWithMatchedDimensions];
+    [self.reviewView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     
     [self.reviewView.rejectButton addTarget:self action:@selector(rejectButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.reviewView.acceptButton addTarget:self action:@selector(acceptButtonPressed:) forControlEvents:UIControlEventTouchUpInside];

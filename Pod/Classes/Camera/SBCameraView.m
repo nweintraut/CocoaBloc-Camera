@@ -18,7 +18,6 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
 #import "UIDevice+Orientation.h"
-#import "UIView+Extension.h"
 #import "SBOptionsChevronButton.h"
 
 @import AVFoundation.AVCaptureVideoPreviewLayer;
@@ -277,11 +276,11 @@ BOOL isSmallScreen() {
 - (void) initializeViews {
     //toolbar
     [self addSubview:self.stateToolbar];
-    [self.stateToolbar autoCenterInSuperviewWithMatchedDimensions];
+    [self.stateToolbar autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     
     //shutter view
     [self addSubview:self.shutterView];
-    [self.shutterView autoCenterInSuperviewWithMatchedDimensions];
+    [self.shutterView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     
     //add focus view
     [self.captureView addSubview:self.focusView];

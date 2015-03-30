@@ -9,7 +9,6 @@
 #import "SBRecordButton.h"
 #import <PureLayout/PureLayout.h>
 #import "UIColor+CocoaBloc.h"
-#import "UIView+Extension.h"
 
 #import <pop/POP.h>
 

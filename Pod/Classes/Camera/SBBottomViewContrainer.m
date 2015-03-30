@@ -8,7 +8,6 @@
 
 #import "SBBottomViewContrainer.h"
 #import <PureLayout/PureLayout.h>
-#import "UIView+Extension.h"
 
 @interface SBBottomViewContrainer ()
 
@@ -33,8 +32,15 @@
     _toolbar.translucent = YES;
 
     [self addSubview:_toolbar];
-    [_toolbar autoCenterInSuperviewWithMatchedDimensions];
-    
+
+    [_toolbar autoCenterInSuperview];
+    [_toolbar autoMatchDimension:ALDimensionWidth
+                     toDimension:ALDimensionWidth
+                          ofView:_toolbar.superview];
+    [_toolbar autoMatchDimension:ALDimensionHeight
+                     toDimension:ALDimensionHeight
+                          ofView:_toolbar.superview];
+
     self.hidden = YES;
 }
 
