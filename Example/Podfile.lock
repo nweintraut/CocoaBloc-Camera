@@ -4,11 +4,13 @@ PODS:
     - pop
     - PureLayout
     - ReactiveCocoa
-  - CocoaBloc-UI (0.0.2):
-    - CocoaBloc-UI/Colors (= 0.0.2)
-    - CocoaBloc-UI/Fonts (= 0.0.2)
-  - CocoaBloc-UI/Colors (0.0.2)
-  - CocoaBloc-UI/Fonts (0.0.2)
+  - CocoaBloc-UI (0.0.3):
+    - CocoaBloc-UI/Colors (= 0.0.3)
+    - CocoaBloc-UI/Fonts (= 0.0.3)
+    - CocoaBloc-UI/PlaceholderTextView (= 0.0.3)
+  - CocoaBloc-UI/Colors (0.0.3)
+  - CocoaBloc-UI/Fonts (0.0.3)
+  - CocoaBloc-UI/PlaceholderTextView (0.0.3)
   - Expecta (0.3.2)
   - Expecta+Snapshots (1.3.2):
     - Expecta (~> 0.3)
@@ -38,7 +40,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaBloc-Camera: ac7861d2cfb2b06c938ad4e7b1e33f4caebae889
-  CocoaBloc-UI: 01dce7c62fefff7d802c57a0f0eefc7521668822
+  CocoaBloc-UI: 642c068702d2594d74d1f7367f72eb13b6563f54
   Expecta: 8c507baf13211207b1e9d0a741480600e6b4ed15
   Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
   FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
