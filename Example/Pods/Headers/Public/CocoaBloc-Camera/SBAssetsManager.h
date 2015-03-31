@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/Camera/SBAssetsManager.h
