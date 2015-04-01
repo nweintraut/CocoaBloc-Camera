@@ -19,4 +19,4 @@ install:
     - pod lib lint --quick
 
 script:
-    - set -o pipefail && xcodebuild test -workspace Example/CocoaBloc-Camera.xcworkspace -scheme CocoaBloc-Camera-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -sc
+    - set -o pipefail && xcodebuild test -workspace Example/CocoaBloc-Camera.xcworkspace -scheme CocoaBloc-Camera-Example -sdk iphonesimulator8.1 ONLY_ACTIVE_ARCH=NO | xcpretty -sc
