@@ -8,7 +8,7 @@ branches:
 notifications:
     email: false
     slack:
-        secure: OX9uWE+VLBZN+zfN/ov8jq6lElmJxLcw+ME//ziAlKdDGs7qJbtlnJv9qCHO5e0BCf9Qt3UrKicK4ppJ3B5F7DL+7EKAF0z2DRxLqz/MRWgIqQoC/9IUEfGoc/Ff9XoMoIvBSH1gcR7Y6zcUgJluudQBGZGbGx2UC42GKGBZnYY=
+        secure: "ijz0tVYV6ecUKOVeNpikfBmaU/Dj1rvBXbvF8iFh/0UCEPsoY3BEm4KjubizRxt9Sie25b+38NU7ICoLOZTMfAqm0srVt5ys3jwdJA2D/17A29g7B2Fjke+oqq2FQyb1Fb+Mpg9jQqQg2R1kywYc72CbczWdR7bCsF6Im1dF+kg="
         on_success: change
         on_failure: always
 
@@ -20,4 +20,4 @@ install:
     - pod lib lint --quick
 
 script:
-    - xctool test -freshSimulator -test-sdk iphonesimulator -workspace Example/CocoaBloc-Camera.xcworkspace -scheme CocoaBloc-Camera-Example -reporter plain
+    - xctool test -freshSimulator -test-sdk iphonesimulator -workspace Example/CocoaBloc-Camera.xcworkspace -scheme CocoaBloc-Camera-Example -reporter pretty
