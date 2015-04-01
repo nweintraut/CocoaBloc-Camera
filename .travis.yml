@@ -1,4 +1,10 @@
 language: objective-c
+
+branches:
+    only:
+        - master
+        - dev
+
 notifications:
     email: false
     slack:
@@ -7,12 +13,10 @@ notifications:
         on_failure: always
 
 before_install:
-    - gem update cocoapods --quiet
     - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 install:
     - pod lib lint --quick
-    - pod update --project-directory=Example
 
 script:
-    - set -o pipefail && xcodebuild test -workspace Example/CocoaBloc-Camera.xcworkspace -scheme CocoaBloc-Camera-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+    - set -o pipefail && xcodebuild test -workspace Example/CocoaBloc-Camera.xcworkspace -scheme CocoaBloc-Camera-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -tc
