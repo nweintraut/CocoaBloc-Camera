@@ -107,6 +107,7 @@
     instruction.layerInstructions = @[transformer];
     videoComposition.instructions = @[instruction];
     
+    [[NSFileManager defaultManager] removeItemAtURL:self.outputURL error:nil];
     AVAssetExportSession *exporter = [AVAssetExportSession exportSessionWithAsset:self.asset presetName:self.exportPreset outputURL:self.outputURL];
     exporter.videoComposition = videoComposition;
     return exporter;

@@ -1,9 +1,9 @@
 PODS:
-  - CocoaBloc-Camera (0.1.4):
-    - CocoaBloc-UI
-    - pop
-    - PureLayout
-    - ReactiveCocoa
+  - CocoaBloc-Camera (0.1.5):
+    - CocoaBloc-UI (~> 0.0.3)
+    - pop (~> 1.0)
+    - PureLayout (~> 2.0)
+    - ReactiveCocoa (~> 2.0)
   - CocoaBloc-UI (0.0.4):
     - CocoaBloc-UI/Colors (= 0.0.4)
     - CocoaBloc-UI/Fonts (= 0.0.4)
@@ -36,10 +36,10 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   CocoaBloc-Camera:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  CocoaBloc-Camera: ea66c50e4b9e21a8a6cab743551208921cf1ce86
+  CocoaBloc-Camera: 1f54550ed33151352c3a59ede03607386d30e354
   CocoaBloc-UI: ed63e11004be0863e131379cf19af896019a2b89
   Expecta: 8c507baf13211207b1e9d0a741480600e6b4ed15
   Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
@@ -49,4 +49,4 @@ SPEC CHECKSUMS:
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
   Specta: a353759f073ffcc0a365b782fe4aaeac064c03c6
 
-COCOAPODS: 0.36.1
+COCOAPODS: 0.36.3
