@@ -1,16 +1,16 @@
 PODS:
-  - CocoaBloc-Camera (0.1.3):
+  - CocoaBloc-Camera (0.1.4):
     - CocoaBloc-UI
     - pop
     - PureLayout
     - ReactiveCocoa
-  - CocoaBloc-UI (0.0.3):
-    - CocoaBloc-UI/Colors (= 0.0.3)
-    - CocoaBloc-UI/Fonts (= 0.0.3)
-    - CocoaBloc-UI/PlaceholderTextView (= 0.0.3)
-  - CocoaBloc-UI/Colors (0.0.3)
-  - CocoaBloc-UI/Fonts (0.0.3)
-  - CocoaBloc-UI/PlaceholderTextView (0.0.3)
+  - CocoaBloc-UI (0.0.4):
+    - CocoaBloc-UI/Colors (= 0.0.4)
+    - CocoaBloc-UI/Fonts (= 0.0.4)
+    - CocoaBloc-UI/PlaceholderTextView (= 0.0.4)
+  - CocoaBloc-UI/Colors (0.0.4)
+  - CocoaBloc-UI/Fonts (0.0.4)
+  - CocoaBloc-UI/PlaceholderTextView (0.0.4)
   - Expecta (0.3.2)
   - Expecta+Snapshots (1.3.2):
     - Expecta (~> 0.3)
@@ -39,8 +39,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CocoaBloc-Camera: ac7861d2cfb2b06c938ad4e7b1e33f4caebae889
-  CocoaBloc-UI: 642c068702d2594d74d1f7367f72eb13b6563f54
+  CocoaBloc-Camera: ea66c50e4b9e21a8a6cab743551208921cf1ce86
+  CocoaBloc-UI: ed63e11004be0863e131379cf19af896019a2b89
   Expecta: 8c507baf13211207b1e9d0a741480600e6b4ed15
   Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
   FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
