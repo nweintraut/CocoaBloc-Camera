@@ -1,14 +1,10 @@
 language: objective-c
 
-branches:
-    only:
-        - master
-        - dev
-
 notifications:
     email: false
     slack:
-        secure: "ijz0tVYV6ecUKOVeNpikfBmaU/Dj1rvBXbvF8iFh/0UCEPsoY3BEm4KjubizRxt9Sie25b+38NU7ICoLOZTMfAqm0srVt5ys3jwdJA2D/17A29g7B2Fjke+oqq2FQyb1Fb+Mpg9jQqQg2R1kywYc72CbczWdR7bCsF6Im1dF+kg="
+        rooms:
+            - secure: "ijz0tVYV6ecUKOVeNpikfBmaU/Dj1rvBXbvF8iFh/0UCEPsoY3BEm4KjubizRxt9Sie25b+38NU7ICoLOZTMfAqm0srVt5ys3jwdJA2D/17A29g7B2Fjke+oqq2FQyb1Fb+Mpg9jQqQg2R1kywYc72CbczWdR7bCsF6Im1dF+kg="
         on_success: change
         on_failure: always
 
