@@ -31,10 +31,22 @@
     self.scrollView.contentSize = self.scrollView.frame.size;
     
     [self insertSubview:self.scrollView atIndex:0];
-    [self.scrollView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    [self.scrollView autoCenterInSuperview];
+    [self.scrollView autoMatchDimension:ALDimensionHeight
+                              toDimension:ALDimensionHeight
+                                   ofView:self.scrollView.superview];
+    [self.scrollView autoMatchDimension:ALDimensionWidth
+                              toDimension:ALDimensionWidth
+                                   ofView:self.scrollView.superview];
     
     [self.scrollView addSubview:self.imageView];
-    [self.imageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    [self.imageView autoCenterInSuperview];
+    [self.imageView autoMatchDimension:ALDimensionHeight
+                           toDimension:ALDimensionHeight
+                                ofView:self.imageView.superview];
+    [self.imageView autoMatchDimension:ALDimensionWidth
+                           toDimension:ALDimensionWidth
+                                ofView:self.imageView.superview];
 }
 
 - (instancetype) initWithFrame:(CGRect)frame image:(UIImage*)image {

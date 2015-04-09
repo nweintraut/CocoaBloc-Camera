@@ -276,11 +276,22 @@ BOOL isSmallScreen() {
 - (void) initializeViews {
     //toolbar
     [self addSubview:self.stateToolbar];
-    [self.stateToolbar autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
-    
+    [self.stateToolbar autoCenterInSuperview];
+    [self.stateToolbar autoMatchDimension:ALDimensionHeight
+                              toDimension:ALDimensionHeight
+                                   ofView:self.stateToolbar.superview];
+    [self.stateToolbar autoMatchDimension:ALDimensionWidth
+                              toDimension:ALDimensionWidth
+                                   ofView:self.stateToolbar.superview];
     //shutter view
     [self addSubview:self.shutterView];
-    [self.shutterView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    [self.shutterView autoCenterInSuperview];
+    [self.shutterView autoMatchDimension:ALDimensionHeight
+                             toDimension:ALDimensionHeight
+                                  ofView:self.shutterView.superview];
+    [self.shutterView autoMatchDimension:ALDimensionWidth
+                             toDimension:ALDimensionWidth
+                                  ofView:self.shutterView.superview];
     
     //add focus view
     [self.captureView addSubview:self.focusView];
