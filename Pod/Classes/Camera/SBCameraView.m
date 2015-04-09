@@ -585,7 +585,10 @@ BOOL isSmallScreen() {
 
 #pragma mark - UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    return !(touch.view == self.recordButton || touch.view == self.bottomContainerView || touch.view == self.topContainerView || touch.view == self.nextButton);
+    return !(CGRectContainsPoint(self.recordButton.bounds, [touch locationInView:self.recordButton])
+             || CGRectContainsPoint(self.bottomContainerView.bounds, [touch locationInView:self.bottomContainerView])
+             || CGRectContainsPoint(self.topContainerView.bounds, [touch locationInView:self.topContainerView])
+             || CGRectContainsPoint(self.nextButton.bounds, [touch locationInView:self.nextButton]));
 }
 
 #pragma mark - Animations
