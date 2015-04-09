@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SBCaptureManager.h"
 #import "SBReviewController.h"
+#import "SBAsset.h"
 
-@class SBCaptureViewController, SBAsset, SBCameraView;
+@class SBCaptureViewController, SBCameraView;
 
 @protocol SBCaptureViewControllerDelegate <SBReviewControllerDelegate>
 @optional
