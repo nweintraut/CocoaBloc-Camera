@@ -10,7 +10,7 @@
 #define COCOAPODS_POD_AVAILABLE_CocoaBloc_Camera
 #define COCOAPODS_VERSION_MAJOR_CocoaBloc_Camera 0
 #define COCOAPODS_VERSION_MINOR_CocoaBloc_Camera 1
-#define COCOAPODS_VERSION_PATCH_CocoaBloc_Camera 4
+#define COCOAPODS_VERSION_PATCH_CocoaBloc_Camera 6
 
 // CocoaBloc-UI
 #define COCOAPODS_POD_AVAILABLE_CocoaBloc_UI

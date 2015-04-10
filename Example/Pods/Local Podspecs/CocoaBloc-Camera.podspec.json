@@ -1,6 +1,6 @@
 {
   "name": "CocoaBloc-Camera",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "summary": "StageBloc's iOS camera components",
   "description": "An iOS UI framework for StageBloc photo/video composition",
   "homepage": "https://github.com/stagebloc/CocoaBloc-Camera",
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/stagebloc/CocoaBloc-Camera.git",
-    "tag": "0.1.4"
+    "tag": "0.1.6"
   },
   "social_media_url": "https://twitter.com/stagebloc",
   "platforms": {
@@ -25,16 +25,16 @@
   "requires_arc": true,
   "dependencies": {
     "pop": [
-
+      "~> 1.0"
     ],
     "ReactiveCocoa": [
-
+      "~> 2.0"
     ],
     "PureLayout": [
-
+      "~> 2.0"
     ],
     "CocoaBloc-UI": [
-
+      "~> 0.0.3"
     ]
   },
   "source_files": "Pod/Classes/**/*",
