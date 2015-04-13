@@ -76,7 +76,7 @@
 - (void) toggleHiddenWithCustomAnimations:(void(^)(BOOL shouldHide))customAnimations completion:(void(^)(BOOL finished))completion {
     BOOL shouldHide = [self isVisible];
     [self adjustConstraintsHidden:shouldHide];
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:.7 initialSpringVelocity:0 options:0 animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:.7 initialSpringVelocity:0 options:UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState animations:^{
         [self.superview layoutSubviews];
         if (customAnimations) customAnimations(shouldHide);
     } completion:^(BOOL finished) {

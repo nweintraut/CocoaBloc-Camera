@@ -108,7 +108,13 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.toolbar];
-    [self.toolbar autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    [self.toolbar autoCenterInSuperview];
+    [self.toolbar autoMatchDimension:ALDimensionHeight
+                         toDimension:ALDimensionHeight
+                              ofView:self.toolbar.superview];
+    [self.toolbar autoMatchDimension:ALDimensionWidth
+                         toDimension:ALDimensionWidth
+                              ofView:self.toolbar.superview];
     
     CGSize size = CGSizeMake(280, [UIApplication canOpenSettings] ? 20 : 50);
     if (self.detailsButton) {

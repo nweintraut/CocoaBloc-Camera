@@ -276,11 +276,22 @@ BOOL isSmallScreen() {
 - (void) initializeViews {
     //toolbar
     [self addSubview:self.stateToolbar];
-    [self.stateToolbar autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
-    
+    [self.stateToolbar autoCenterInSuperview];
+    [self.stateToolbar autoMatchDimension:ALDimensionHeight
+                              toDimension:ALDimensionHeight
+                                   ofView:self.stateToolbar.superview];
+    [self.stateToolbar autoMatchDimension:ALDimensionWidth
+                              toDimension:ALDimensionWidth
+                                   ofView:self.stateToolbar.superview];
     //shutter view
     [self addSubview:self.shutterView];
-    [self.shutterView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    [self.shutterView autoCenterInSuperview];
+    [self.shutterView autoMatchDimension:ALDimensionHeight
+                             toDimension:ALDimensionHeight
+                                  ofView:self.shutterView.superview];
+    [self.shutterView autoMatchDimension:ALDimensionWidth
+                             toDimension:ALDimensionWidth
+                                  ofView:self.shutterView.superview];
     
     //add focus view
     [self.captureView addSubview:self.focusView];
@@ -585,7 +596,10 @@ BOOL isSmallScreen() {
 
 #pragma mark - UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    return !(touch.view == self.recordButton || touch.view == self.bottomContainerView || touch.view == self.topContainerView || touch.view == self.nextButton);
+    return !(CGRectContainsPoint(self.recordButton.bounds, [touch locationInView:self.recordButton])
+             || CGRectContainsPoint(self.bottomContainerView.bounds, [touch locationInView:self.bottomContainerView])
+             || CGRectContainsPoint(self.topContainerView.bounds, [touch locationInView:self.topContainerView])
+             || CGRectContainsPoint(self.nextButton.bounds, [touch locationInView:self.nextButton]));
 }
 
 #pragma mark - Animations
