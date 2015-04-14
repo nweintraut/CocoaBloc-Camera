@@ -33,7 +33,7 @@ static CGFloat const kAnimationVelocity = 0.5f;
 - (UIButton*) rejectButton {
     if (!_rejectButton) {
         _rejectButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_rejectButton setImage:[[UIImage imageNamed:@"close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [_rejectButton setImage:[[UIImage imageNamed:@"sb_camera_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         _rejectButton.tintColor = [UIColor colorWithRed:1 green:.294117647 blue:.376470588 alpha:1];
         _rejectButton.imageView.contentMode = UIViewContentModeCenter;
         _rejectButton.backgroundColor = [UIColor whiteColor];
@@ -44,7 +44,7 @@ static CGFloat const kAnimationVelocity = 0.5f;
 - (UIButton*) acceptButton {
     if (!_acceptButton) {
         _acceptButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_acceptButton setImage:[[UIImage imageNamed:@"checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [_acceptButton setImage:[[UIImage imageNamed:@"sb_camera_checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         _acceptButton.tintColor = [UIColor colorWithRed:.078431373 green:.866666667 blue:.807843137 alpha:1];
         _acceptButton.imageView.contentMode = UIViewContentModeCenter;
         _acceptButton.backgroundColor = [UIColor whiteColor];
@@ -55,7 +55,7 @@ static CGFloat const kAnimationVelocity = 0.5f;
 - (UIButton*) undoButton {
     if (!_undoButton) {
         _undoButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_undoButton setImage:[UIImage imageNamed:@"undo_circle"] forState:UIControlStateNormal];
+        [_undoButton setImage:[UIImage imageNamed:@"sb_camera_undo_circle"] forState:UIControlStateNormal];
         _undoButton.imageView.contentMode = UIViewContentModeCenter;
     }
     return _undoButton;
@@ -64,7 +64,7 @@ static CGFloat const kAnimationVelocity = 0.5f;
 - (UIButton*) drawButton {
     if (!_drawButton) {
         _drawButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_drawButton setImage:[UIImage imageNamed:@"draw_circle"] forState:UIControlStateNormal];
+        [_drawButton setImage:[UIImage imageNamed:@"sb_camera_draw_circle"] forState:UIControlStateNormal];
         _drawButton.imageView.contentMode = UIViewContentModeCenter;
     }
     return _drawButton;
@@ -126,16 +126,16 @@ static CGFloat const kAnimationVelocity = 0.5f;
         
         UIToolbar *optionsMenuToolbar = _optionsViewContainer.toolbar;
         _officialButton = [[SBCaptionButton alloc] init];
-        _officialButton.offImage = [UIImage imageNamed:@"official_off"];
-        _officialButton.onImage = [UIImage imageNamed:@"official_on"];
+        _officialButton.offImage = [UIImage imageNamed:@"sb_camera_official_off"];
+        _officialButton.onImage = [UIImage imageNamed:@"sb_camera_official_on"];
         _officialButton.on = NO;
         _officialButton.imageView.contentMode = UIViewContentModeCenter;
         _officialButton.captionLabel.text = @"Official";
         [optionsMenuToolbar addSubview:_officialButton];
 
         _exclusiveButton = [[SBCaptionButton alloc] init];
-        _exclusiveButton.offImage = [UIImage imageNamed:@"exclusive_off"];
-        _exclusiveButton.onImage = [UIImage imageNamed:@"exclusive_on"];
+        _exclusiveButton.offImage = [UIImage imageNamed:@"sb_camera_exclusive_off"];
+        _exclusiveButton.onImage = [UIImage imageNamed:@"sb_camera_exclusive_on"];
         _exclusiveButton.imageView.contentMode = UIViewContentModeCenter;
         _exclusiveButton.on = NO;
         _exclusiveButton.captionLabel.text = @"Exclusive";
