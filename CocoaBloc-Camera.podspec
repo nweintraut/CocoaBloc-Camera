@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "CocoaBloc-Camera"
-    s.version          = "0.1.6"
+    s.version          = "0.1.7"
     s.summary          = "StageBloc's iOS camera components"
     s.description      = "An iOS UI framework for StageBloc photo/video composition"
     s.homepage         = "https://github.com/stagebloc/CocoaBloc-Camera"
