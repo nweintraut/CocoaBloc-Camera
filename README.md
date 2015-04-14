@@ -15,7 +15,7 @@ pod 'CocoaBloc-Camera'
 ```
 
 ## Getting Started
-#### Implementing CococaBloc-Camera Step by Step:
+#### Implementing CococaBloc-Camera:
 1. Init a `SBCameraViewController`
 2. Set the `SBCameraViewController's` `delegate`.
 3. Present the `SBCameraViewController`.
