@@ -12,9 +12,7 @@
 @implementation SBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.window.rootViewController = [[SBCaptureViewController alloc] initWithInitialCaptureType:SBCaptureTypePhoto];
-    
+{    
     return YES;
 }
 							
