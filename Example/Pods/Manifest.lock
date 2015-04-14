@@ -36,7 +36,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   CocoaBloc-Camera:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   CocoaBloc-Camera: 3843f8ce678c7ba2d535edf1575dae48e0208180

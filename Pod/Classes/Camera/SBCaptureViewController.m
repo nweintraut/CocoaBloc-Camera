@@ -621,7 +621,7 @@
     self.cameraView.aspectRatio = self.captureManager.videoManager.aspectRatio;
 }
 
-- (void) nextButtonPressed:(UIButton*)sender {
+- (void)nextButtonPressed:(UIButton*)sender {
     if (![self.captureManager.videoManager isPastMinDuration]) {
         [[[UIAlertView alloc] initWithTitle:@"Cannot Save" message:@"The minimum duration has not been reached" delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil] show];
         return;
@@ -644,7 +644,7 @@
     } completed:^{
         @strongify(self);
         [self.overlayHud dismiss];
-        [self.captureManager.videoManager reset];
+//        [self.captureManager.videoManager reset];
     }];
 }
 
