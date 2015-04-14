@@ -96,7 +96,9 @@
     [self.overlayConstraints autoRemoveConstraints];
     NSMutableArray *constraints = [NSMutableArray array];
     
-    [constraints addObjectsFromArray:[self.overlayToolbar autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero]];
+    [constraints addObjectsFromArray:[self.overlayToolbar autoCenterInSuperview]];
+    [constraints addObject:[self.overlayToolbar autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.overlayToolbar.superview]];
+    [constraints addObject:[self.overlayToolbar autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.overlayToolbar.superview]];
     
     [constraints addObjectsFromArray:[self.activityIndicatorView autoCenterInSuperview]];
     [constraints addObjectsFromArray:[self.activityIndicatorView autoSetDimensionsToSize:CGSizeMake(30, 30)]];
@@ -126,7 +128,9 @@
 + (instancetype) showInView:(UIView*)superview text:(NSString*)text dismissOnTap:(BOOL)dismissOnTap duration:(NSTimeInterval)duration {
     SBOverlayView *view = [[SBOverlayView alloc] initWithFrame:superview.frame text:text];
     [superview addSubview:view];
-    view.showConstraints = [view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    view.showConstraints = [[view autoCenterInSuperview]
+                                arrayByAddingObjectsFromArray:@[[view autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:view.superview],
+                                                                [view autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:view.superview]]];
     view.showDuration = duration;
     [view animateShowWithDuration:duration showDismissDialog:dismissOnTap completion:nil];
     return view;
