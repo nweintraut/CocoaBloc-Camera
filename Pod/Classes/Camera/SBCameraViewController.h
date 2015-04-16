@@ -49,4 +49,8 @@
                    initialCaptureType:(SBCaptureType)captureType
                   allowedCaptureTypes:(SBCaptureType)allowedCaptureTypes;
 
+- (instancetype)initWithCaptureViewController:(SBCaptureViewController *)captureViewController;
+
+@property (nonatomic, readonly) SBCaptureViewController *captureViewController;
+
 @end
