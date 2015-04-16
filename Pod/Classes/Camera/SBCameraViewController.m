@@ -43,11 +43,19 @@
 }
 
 - (instancetype)initWithReviewOptions:(SBReviewViewOptions)options initialCaptureType:(SBCaptureType)captureType allowedCaptureTypes:(SBCaptureType)allowedCaptureTypes {
+    SBCaptureViewController *vc = [[SBCaptureViewController alloc] initWithInitialCaptureType:captureType allowedCaptureTypes:allowedCaptureTypes];
+    vc.reviewOptions = options;
+    
+    return [self initWithCaptureViewController:vc];
+}
+
+- (instancetype)initWithCaptureViewController:(SBCaptureViewController *)captureViewController {
+    NSParameterAssert(captureViewController);
+    
     if (self = [super init]) {
-        SBCaptureViewController *controller = [[SBCaptureViewController alloc] initWithInitialCaptureType:captureType allowedCaptureTypes:allowedCaptureTypes];
-        controller.reviewOptions = options;
-        [self setViewControllers:@[controller]];
+        [self setViewControllers:@[_captureViewController = captureViewController]];
     }
+    
     return self;
 }
 

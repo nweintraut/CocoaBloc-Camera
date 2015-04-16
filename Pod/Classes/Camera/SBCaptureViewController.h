@@ -70,4 +70,6 @@
  */
 - (instancetype)initWithInitialCaptureType:(SBCaptureType)captureType allowedCaptureTypes:(SBCaptureType)allowedCaptureTypes;
 
+- (instancetype)initWithInitialCaptureType:(SBCaptureType)captureType allowedCaptureTypes:(SBCaptureType)allowedCaptureTypes captureSession:(AVCaptureSession *)session;
+
 @end
