@@ -294,15 +294,15 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
-    [self.cameraView.captureView addSessionIfNeeded:self.captureManager.captureSession];
-}
-
-- (void) viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [self.cameraView.captureView removeSession];
-}
+//-(void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:YES];
+//    [self.cameraView.captureView addSessionIfNeeded:self.captureManager.captureSession];
+//}
+//
+//- (void) viewDidDisappear:(BOOL)animated {
+//    [super viewDidDisappear:animated];
+//    [self.cameraView.captureView removeSession];
+//}
 
 #pragma mark - Camera state handling
 - (void) updateUIForNewPage {

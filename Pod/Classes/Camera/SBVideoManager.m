@@ -206,7 +206,7 @@ CGFloat aspectRatio(CGSize size) {
     if (self.currentWrites <= 0) {
         return self.currentFinalDuration;
     }
-    
+        
     if(CMTimeCompare(kCMTimeZero, self.currentFinalDuration) == 0 && ![self isReset]) {
         return self.movieFileOutput.recordedDuration;
     } else if (!self.paused && self.movieFileOutput.isRecording) {
@@ -312,13 +312,12 @@ CGFloat aspectRatio(CGSize size) {
 
 - (RACSignal*) recordDurationChangeSignal {
     @weakify(self);
-    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        [[[RACSignal interval:0.01f onScheduler:[RACScheduler mainThreadScheduler]] startWith:[NSDate date]] subscribeNext:^(id x) {
-            @strongify(self);
-            [subscriber sendNext:[NSValue valueWithCMTime:[self totalRecordingDuration]]];
-        }];
-        return nil;
-    }];
+    return [[[RACSignal interval:0.01f onScheduler:[RACScheduler mainThreadScheduler]]
+            deliverOnMainThread]
+            map:^id(id value) {
+                @strongify(self);
+                return [NSValue valueWithCMTime:[self totalRecordingDuration]];
+            }];
 }
 
 #pragma mark - AVCaptureFileOutputRecordingDelegate implementation
