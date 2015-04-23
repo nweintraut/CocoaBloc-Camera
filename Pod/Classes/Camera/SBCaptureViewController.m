@@ -74,12 +74,6 @@
     return _assetManager;
 }
 
-- (SBCaptureManager*) captureManager {
-    if (!_captureManager)
-        _captureManager = [[SBCaptureManager alloc] init];
-    return _captureManager;
-}
-
 - (SBCameraView*) cameraView {
     if (!_cameraView) {
         _cameraView = [[SBCameraView alloc] initWithFrame:self.view.frame captureManager:self.captureManager];
@@ -116,8 +110,13 @@
 }
 
 - (instancetype)initWithInitialCaptureType:(SBCaptureType)captureType allowedCaptureTypes:(SBCaptureType)allowedCaptureTypes {
-    if (self = [super init]) {
+    return [self initWithInitialCaptureType:captureType allowedCaptureTypes:allowedCaptureTypes captureSession:nil];
+}
 
+- (instancetype)initWithInitialCaptureType:(SBCaptureType)captureType allowedCaptureTypes:(SBCaptureType)allowedCaptureTypes captureSession:(AVCaptureSession *)session {
+    if (self = [super init]) {
+        _captureManager = [[SBCaptureManager alloc] initWithSession:session ?: [AVCaptureSession new]];
+        
         BOOL allowsPhoto = (allowedCaptureTypes & SBCaptureTypePhoto) != 0;
         BOOL allowsVideo = (allowedCaptureTypes & SBCaptureTypeVideo) != 0;
         
