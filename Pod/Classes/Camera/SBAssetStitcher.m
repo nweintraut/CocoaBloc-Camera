@@ -76,8 +76,12 @@
     comp.devicePosition = devicePosition;
     comp.outputURL = [NSURL randomTemporaryMP4FileURLWithPrefix:@"composition"];
 
-    [self.compositionFileURLs addObject:comp.outputURL];
-    [self.compositions addObject:comp];
+    if (CMTimeGetSeconds(comp.asset.duration) > .2 && ![self.compositionFileURLs containsObject:comp.outputURL]) {
+        [self.compositionFileURLs addObject:comp.outputURL];
+        [self.compositions addObject:comp];
+    } else {
+        NSLog(@"Video segment too short");
+    }
 }
 
 - (RACSignal*)exportTo:(NSURL *)outputFileURL options:(SBAssetStitcherOptions *)options {
