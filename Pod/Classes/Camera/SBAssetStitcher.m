@@ -79,8 +79,6 @@
     if (CMTimeGetSeconds(comp.asset.duration) > .2 && ![self.compositionFileURLs containsObject:comp.outputURL]) {
         [self.compositionFileURLs addObject:comp.outputURL];
         [self.compositions addObject:comp];
-    } else {
-        NSLog(@"Video segment too short");
     }
 }
 
