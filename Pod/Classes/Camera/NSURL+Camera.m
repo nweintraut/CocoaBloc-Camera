@@ -17,11 +17,11 @@ NSString *SBDocumentsDirectory() {
 @implementation NSURL (Camera)
 
 + (instancetype) randomDocumentsFileURLWithPrefix:(NSString*)prefix extension:(NSString*)extension {
-    return [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@-%ld.%@", SBDocumentsDirectory(), prefix, (long)[[NSDate date] timeIntervalSince1970], extension]];
+    return [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@-%@.%@", SBDocumentsDirectory(), prefix, [[NSUUID UUID] UUIDString] , extension]];
 }
 
 + (instancetype) randomTemporaryFileURLWithPrefix:(NSString*)prefix extension:(NSString*)extension {
-    return [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@-%ld.%@", NSTemporaryDirectory(), prefix, (long)[[NSDate date] timeIntervalSince1970], extension]];
+    return [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@-%@.%@", NSTemporaryDirectory(), prefix, [[NSUUID UUID] UUIDString], extension]];
 }
 
 + (instancetype) randomTemporaryMP4FileURLWithPrefix:(NSString*)prefix {

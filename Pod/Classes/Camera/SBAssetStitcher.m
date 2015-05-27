@@ -76,10 +76,8 @@
     comp.devicePosition = devicePosition;
     comp.outputURL = [NSURL randomTemporaryMP4FileURLWithPrefix:@"composition"];
 
-    if (CMTimeGetSeconds(comp.asset.duration) > .2 && ![self.compositionFileURLs containsObject:comp.outputURL]) {
-        [self.compositionFileURLs addObject:comp.outputURL];
-        [self.compositions addObject:comp];
-    }
+    [self.compositionFileURLs addObject:comp.outputURL];
+    [self.compositions addObject:comp];
 }
 
 - (RACSignal*)exportTo:(NSURL *)outputFileURL options:(SBAssetStitcherOptions *)options {
