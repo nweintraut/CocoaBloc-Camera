@@ -111,7 +111,7 @@
     AVAssetExportSession *exporter = [AVAssetExportSession exportSessionWithAsset:self.asset presetName:self.exportPreset outputURL:self.outputURL];
     exporter.videoComposition = videoComposition;
 
-    // Video composition validation -> helpful with debugging
+    // Video composition validation -> helpful in debugging export session failure.
     [exporter.videoComposition isValidForAsset:exporter.asset timeRange:exporter.timeRange validationDelegate:self];
 
     return exporter;
