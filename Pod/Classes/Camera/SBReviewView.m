@@ -496,4 +496,5 @@ static CGFloat const kAnimationVelocity = 0.5f;
     [self animateLayoutChangeWithDuration:animationDuration damping:.95 velocity:.5 completion:nil];
 }
 
+
 @end

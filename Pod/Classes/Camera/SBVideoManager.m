@@ -108,6 +108,17 @@ CGFloat aspectRatio(CGSize size) {
         } else {
             NSLog(@"Error setting file output");
         }
+
+        @weakify(self);
+        [[[[self recordDurationChangeSignal] map:^id(NSValue *value) {
+            return @(CMTimeGetSeconds([value CMTimeValue]) >= 10.0f);
+        }] distinctUntilChanged]
+         subscribeNext:^(NSNumber *limitReached) {
+             @strongify(self);
+             if (limitReached.boolValue) {
+                 [self pauseRecording];
+             }
+         }];
     }
     return self;
 }
@@ -175,12 +186,6 @@ CGFloat aspectRatio(CGSize size) {
     [self updateVideoConnectionWithOrientation:self.currentOrientation];
     
     self.currentRecordingSegment++;
-    
-    if(_maxDuration > 0) {
-        self.movieFileOutput.maxRecordedDuration = CMTimeSubtract(CMTimeMakeWithSeconds(_maxDuration, 600), self.currentFinalDuration);
-    } else {
-        self.movieFileOutput.maxRecordedDuration = kCMTimeInvalid;
-    }
     
     NSURL *outputFileURL = [NSURL randomTemporaryMP4FileURLWithPrefix:@"recordingsegment"];
     [self.movieFileOutput startRecordingToOutputFileURL:outputFileURL recordingDelegate:self];
