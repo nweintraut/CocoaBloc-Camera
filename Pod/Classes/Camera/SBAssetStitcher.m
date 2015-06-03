@@ -118,7 +118,15 @@
             [subscriber sendError:error];
             return nil;
         }
-        
+
+        // Trim final video to exactly 10 seconds.
+        float duration = CMTimeGetSeconds(composition.duration);
+        if (duration > 10.0f) {
+            CMTime maxLength = CMTimeMakeWithSeconds(10.f, 600);
+            CMTime excess = CMTimeSubtract(composition.duration, maxLength);
+            [composition removeTimeRange:CMTimeRangeMake(maxLength, excess)];
+        }
+
         SBComposition *finalComposition = [[SBComposition alloc] initWithAsset:composition];
         finalComposition.outputURL = outputFileURL;
         finalComposition.orientation = AVCaptureVideoOrientationLandscapeRight; //don't rotate this composition

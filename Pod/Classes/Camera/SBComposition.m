@@ -13,7 +13,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
 
-@interface SBComposition ()
+@interface SBComposition () <AVVideoCompositionValidationHandling>
 @end
 
 @implementation SBComposition
@@ -110,6 +110,10 @@
     [[NSFileManager defaultManager] removeItemAtURL:self.outputURL error:nil];
     AVAssetExportSession *exporter = [AVAssetExportSession exportSessionWithAsset:self.asset presetName:self.exportPreset outputURL:self.outputURL];
     exporter.videoComposition = videoComposition;
+
+    // Video composition validation -> helpful in debugging export session failure.
+    [exporter.videoComposition isValidForAsset:exporter.asset timeRange:exporter.timeRange validationDelegate:self];
+
     return exporter;
 }
 
@@ -119,6 +123,28 @@
     return [[exporter exportAsynchronously] map:^AVAsset*(NSURL *savedToURL) {
         return [[AVURLAsset alloc] initWithURL:savedToURL options:@{AVURLAssetPreferPreciseDurationAndTimingKey:@YES}];
     }];
+}
+
+#pragma mark - AVVideoCompositionValidationHandling delegate
+
+-(BOOL)videoComposition:(AVVideoComposition *)videoComposition shouldContinueValidatingAfterFindingEmptyTimeRange:(CMTimeRange)timeRange {
+    NSLog(@"Empty time range in Video Composition");
+    return NO;
+}
+
+-(BOOL)videoComposition:(AVVideoComposition *)videoComposition shouldContinueValidatingAfterFindingInvalidTimeRangeInInstruction:(id<AVVideoCompositionInstruction>)videoCompositionInstruction {
+    NSLog(@"Invalid time range instruction in Video Composition");
+    return NO;
+}
+
+-(BOOL)videoComposition:(AVVideoComposition *)videoComposition shouldContinueValidatingAfterFindingInvalidTrackIDInInstruction:(id<AVVideoCompositionInstruction>)videoCompositionInstruction layerInstruction:(AVVideoCompositionLayerInstruction *)layerInstruction asset:(AVAsset *)asset {
+    NSLog(@"Invalid track ID instruction in Video Composition");
+    return NO;
+}
+
+-(BOOL)videoComposition:(AVVideoComposition *)videoComposition shouldContinueValidatingAfterFindingInvalidValueForKey:(NSString *)key {
+    NSLog(@"Invalid value for key in Video Composition");
+    return NO;
 }
 
 @end

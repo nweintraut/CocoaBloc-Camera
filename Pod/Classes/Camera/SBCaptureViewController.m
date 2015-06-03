@@ -218,13 +218,14 @@
     }];
     
     //enable/disable record button when time is at max duration
-    [[[[self.captureManager.videoManager totalTimeRecordedSignal] deliverOn:[RACScheduler mainThreadScheduler]] map:^NSNumber*(NSValue* value) {
+    [[[[[self.captureManager.videoManager totalTimeRecordedSignal] deliverOn:[RACScheduler mainThreadScheduler]] map:^NSNumber*(NSValue* value) {
         @strongify(self);
         return @(CMTimeGetSeconds([value CMTimeValue]) < self.captureManager.videoManager.maxDuration);
-    }] subscribeNext:^(NSNumber *enabled) {
-        @strongify(self);
-        self.cameraView.recordButton.enabled = enabled.boolValue;
-    }];
+    }] distinctUntilChanged]
+     subscribeNext:^(NSNumber *enabled) {
+         @strongify(self);
+         self.cameraView.recordButton.enabled = enabled.boolValue;
+     }];
     
     RAC(self.cameraView.progressBar, value) = [[[self.captureManager.videoManager recordDurationChangeSignal] skip:1] map:^id(NSValue* value) {
         return @(CMTimeGetSeconds([value CMTimeValue]));
