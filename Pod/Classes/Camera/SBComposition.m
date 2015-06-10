@@ -108,11 +108,16 @@
     videoComposition.instructions = @[instruction];
     
     [[NSFileManager defaultManager] removeItemAtURL:self.outputURL error:nil];
-    AVAssetExportSession *exporter = [AVAssetExportSession exportSessionWithAsset:self.asset presetName:self.exportPreset outputURL:self.outputURL];
+    AVAssetExportSession *exporter = [AVAssetExportSession exportSessionWithAsset:self.asset
+                                                                       presetName:self.exportPreset
+                                                                        outputURL:self.outputURL];
     exporter.videoComposition = videoComposition;
+    exporter.timeRange = CMTimeGetSeconds(videoTrack.timeRange.duration) > 10.f ? CMTimeRangeMake(videoTrack.timeRange.start, CMTimeMakeWithSeconds(10, 600.f)) : CMTimeRangeMake(videoTrack.timeRange.start, videoTrack.timeRange.duration);
 
     // Video composition validation -> helpful in debugging export session failure.
-    [exporter.videoComposition isValidForAsset:exporter.asset timeRange:exporter.timeRange validationDelegate:self];
+    [exporter.videoComposition isValidForAsset:exporter.asset
+                                     timeRange:exporter.timeRange
+                            validationDelegate:self];
 
     return exporter;
 }
