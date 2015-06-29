@@ -8,6 +8,9 @@
 
 #import <AVFoundation/AVFoundation.h>
 
+#ifndef SBCAPTUREMANAGER_H
+#define SBCAPTUREMANAGER_H
+
 @class SBVideoManager, SBPhotoManager, SBDeviceManager, RACSignal;
 
 typedef NS_OPTIONS(NSUInteger, SBCaptureType) {
@@ -62,3 +65,5 @@ typedef NS_ENUM(NSUInteger, SBCaptureFlashMode) {
 - (RACSignal*) currentManagerChangeSignal;
 
 @end
+
+#endif

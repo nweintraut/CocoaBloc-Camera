@@ -23,7 +23,6 @@ Pod::Spec.new do |s|
     s.dependency 'CocoaBloc-UI', '~> 0.0.3'
 
     s.source_files = 'Pod/Classes/**/*'
-    s.private_header_files = "Pod/Classes/Misc/*.h"
     s.resources = ['Pod/Assets/*']
 
 end

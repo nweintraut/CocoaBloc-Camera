@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SBBottomViewContrainer.h"
 
+#ifndef SBREVIEWVIEW_H
+#define SBREVIEWVIEW_H
+
 @class RACSignal, SBCaptionButton, SBOptionsChevronButton;
 
 typedef NS_ENUM(NSUInteger, SBTextFieldLayout) {
@@ -52,3 +55,5 @@ typedef NS_OPTIONS(NSUInteger, SBReviewViewOptions) {
 - (RACSignal*) tapSignal;
 
 @end
+
+#endif
