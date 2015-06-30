@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     s.dependency 'ReactiveCocoa', '~> 2.0'
     s.dependency 'PureLayout', '~> 2.0'
 
-    s.dependency 'CocoaBloc-UI', '~> 0.0.3'
+    s.dependency 'CocoaBloc-UI', '~> 0.0.5'
 
     s.source_files = 'Pod/Classes/**/*'
     s.resources = ['Pod/Assets/*']
