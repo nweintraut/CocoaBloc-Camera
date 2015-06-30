@@ -7,7 +7,7 @@
 //
 
 #import "SBAppDelegate.h"
-#import <CocoaBloc-Camera/SBCaptureViewController.h>
+@import CocoaBlocCamera;
 
 @implementation SBAppDelegate
 

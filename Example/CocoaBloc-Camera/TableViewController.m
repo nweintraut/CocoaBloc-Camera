@@ -7,13 +7,9 @@
 //
 
 #import "TableViewController.h"
-#import <SBReviewController.h>
-#import <CocoaBloc-Camera/SBCameraViewController.h>
-#import "SBAsset.h"
-#import <CocoaBloc-Camera/SBAssetsManager.h>
-#import <ReactiveCocoa/RACEXTScope.h>
-#import "SBOverlayView.h"
-#import "SBCameraAccessViewController.h"
+
+@import ReactiveCocoa;
+@import CocoaBlocCamera;
 
 typedef NS_ENUM(NSUInteger, LaunchType) {
     LaunchTypePresent = 0,
@@ -37,10 +33,6 @@ static NSString* const CellId = @"Cell";
 
 @implementation TableViewController
 
-- (BOOL) canOpenSettings {
-    return (&UIApplicationOpenSettingsURLString != NULL);
-}
-
 - (ALAssetsLibrary*)library {
     if (!_library)
         _library = [[ALAssetsLibrary alloc] init];
@@ -49,7 +41,6 @@ static NSString* const CellId = @"Cell";
 
 - (NSArray*) rowData {
     if (!_rowData) {
-        if ([self canOpenSettings]) {
         _rowData = @[
                      @"Launch Video Controller",
                      @"Launch Photo Controller",
@@ -57,14 +48,6 @@ static NSString* const CellId = @"Cell";
                      @"Launch Overlay",
                      @"Launch Settings",
                      ];
-        } else {
-            _rowData = @[
-                         @"Launch Video Controller",
-                         @"Launch Photo Controller",
-                         @"Launch Review Controller",
-                         @"Launch Overlay",
-                         ];
-        }
     }
     return _rowData;
 }
@@ -157,10 +140,8 @@ static NSString* const CellId = @"Cell";
 }
 
 - (void) openSettings {
-    if ([self canOpenSettings]) {
-        NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-        [[UIApplication sharedApplication] openURL:url];
-    }
+    NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 #pragma mark - SBCameraViewControllerDelegate

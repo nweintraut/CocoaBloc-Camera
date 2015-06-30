@@ -9,6 +9,7 @@ notifications:
         on_failure: always
 
 before_install:
+    - gem install cocoapods
     - brew update
     - brew outdated xctool || brew upgrade xctool
 
@@ -16,4 +17,5 @@ install:
     - pod lib lint --quick
 
 script:
+    - cd Example; pod install; cd ../
     - xctool test -freshSimulator -test-sdk iphonesimulator -workspace Example/CocoaBloc-Camera.xcworkspace -scheme CocoaBloc-Camera-Example -reporter pretty

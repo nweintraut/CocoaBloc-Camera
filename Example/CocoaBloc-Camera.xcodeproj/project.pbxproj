@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27BEDDCB8DB61C9D5B04FF25 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B78783051DF7F8EDFE352B /* Pods_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4D58CF111ADD6A1E00CE5C6C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D58CF101ADD6A1E00CE5C6C /* TableViewController.m */; };
 		4D58CF161ADD6A5F00CE5C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D58CF151ADD6A5F00CE5C6C /* Main.storyboard */; };
 		4D58CF181ADD6C6600CE5C6C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D58CF171ADD6C6600CE5C6C /* LaunchScreen.xib */; };
@@ -22,8 +23,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		8C7C8535CB712FBEA57EEEBF /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 249F5FCC1C79B7564DA746B6 /* libPods-Tests.a */; };
-		D1D709621D46B36E6BAEF352 /* libPods-CocoaBloc-Camera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED1F9FF9734FA1621547C8E /* libPods-CocoaBloc-Camera.a */; };
+		F146EC1412F37A4DAA538D9C /* Pods_CocoaBloc_Camera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF22383D9E3CCFF8F95E54 /* Pods_CocoaBloc_Camera.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,6 @@
 		0FAE05A2B3615C94E923DF13 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		10C8D1EEF2170FDEB6589489 /* Pods-CocoaBloc-Camera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaBloc-Camera.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaBloc-Camera/Pods-CocoaBloc-Camera.release.xcconfig"; sourceTree = "<group>"; };
 		1AF0A0E928DC6DCF275ECD03 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1ED1F9FF9734FA1621547C8E /* libPods-CocoaBloc-Camera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CocoaBloc-Camera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		249F5FCC1C79B7564DA746B6 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D58CF0F1ADD6A1E00CE5C6C /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		4D58CF101ADD6A1E00CE5C6C /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		4D58CF151ADD6A5F00CE5C6C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +62,8 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		60B78783051DF7F8EDFE352B /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FCF22383D9E3CCFF8F95E54 /* Pods_CocoaBloc_Camera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoaBloc_Camera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D1E6970C80D34250371B80 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D072ECFA80B8C656622F14F1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		ED43484BFCC55CFB914989F0 /* CocoaBloc-Camera.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "CocoaBloc-Camera.podspec"; path = "../CocoaBloc-Camera.podspec"; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				D1D709621D46B36E6BAEF352 /* libPods-CocoaBloc-Camera.a in Frameworks */,
+				F146EC1412F37A4DAA538D9C /* Pods_CocoaBloc_Camera.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				8C7C8535CB712FBEA57EEEBF /* libPods-Tests.a in Frameworks */,
+				27BEDDCB8DB61C9D5B04FF25 /* Pods_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +123,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				1ED1F9FF9734FA1621547C8E /* libPods-CocoaBloc-Camera.a */,
-				249F5FCC1C79B7564DA746B6 /* libPods-Tests.a */,
+				6FCF22383D9E3CCFF8F95E54 /* Pods_CocoaBloc_Camera.framework */,
+				60B78783051DF7F8EDFE352B /* Pods_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,6 +207,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				DE0FA93DFEF9A5742597BD55 /* Copy Pods Resources */,
+				CA99B4F945FBE90B663A0138 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,6 +227,7 @@
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
 				3398735699FDFF828A87D0FF /* Copy Pods Resources */,
+				94EF8E541E6CD46BBDA4C102 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,6 +339,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		94EF8E541E6CD46BBDA4C102 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA99B4F945FBE90B663A0138 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CocoaBloc-Camera/Pods-CocoaBloc-Camera-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE0FA93DFEF9A5742597BD55 /* Copy Pods Resources */ = {
@@ -487,6 +519,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaBloc-Camera/CocoaBloc-Camera-Prefix.pch";
 				INFOPLIST_FILE = "CocoaBloc-Camera/CocoaBloc-Camera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -501,6 +534,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaBloc-Camera/CocoaBloc-Camera-Prefix.pch";
 				INFOPLIST_FILE = "CocoaBloc-Camera/CocoaBloc-Camera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

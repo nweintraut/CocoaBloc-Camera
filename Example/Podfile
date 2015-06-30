@@ -1,5 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 inhibit_all_warnings! # pop has some warnings we don't want to expose
+use_frameworks!
+
+platform :ios, '8.0'
 
 target 'CocoaBloc-Camera', :exclusive => true do
   pod "CocoaBloc-Camera", :path => "../"
