@@ -17,5 +17,4 @@ install:
     - pod lib lint --quick
 
 script:
-    - cd Example; pod install; cd ../
     - xctool test -freshSimulator -test-sdk iphonesimulator -workspace Example/CocoaBloc-Camera.xcworkspace -scheme CocoaBloc-Camera-Example -reporter pretty

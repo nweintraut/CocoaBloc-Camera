@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/Camera/SBAssetStitcher.h

@@ -1,0 +1,6 @@
+framework module CocoaBlocUI {
+  umbrella header "Pods-CocoaBloc-Camera-CocoaBloc-UI-umbrella.h"
+
+  export *
+  module * { export * }
+}

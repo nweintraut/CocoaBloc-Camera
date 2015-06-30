@@ -1,0 +1,6 @@
+framework module pop {
+  umbrella header "Pods-CocoaBloc-Camera-pop-umbrella.h"
+
+  export *
+  module * { export * }
+}
