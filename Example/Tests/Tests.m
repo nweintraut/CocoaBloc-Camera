@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 John Heaton. All rights reserved.
 //
 
-#import <Specta/Specta.h>
-#import <Expecta/Expecta.h>
+@import UIKit;
+@import Foundation;
 
 SpecBegin(TestImageResources)
 
@@ -33,10 +33,12 @@ describe(@"Images", ^{
                             @"sb_camera_undo_circle",
                             ];
     
+    NSBundle *bundle = [NSBundle bundleForClass:objc_getClass("SBCaptureView")];
+    
     [imageNames enumerateObjectsUsingBlock:^(NSString *imageName, NSUInteger idx, BOOL *stop) {
         
         it([NSString stringWithFormat:@"should find UIImage named: %@", imageName], ^{
-            UIImage *image = [UIImage imageNamed:imageName];
+            UIImage *image = [UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil];
             expect(image).notTo.equal(nil);
         });
 
