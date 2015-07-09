@@ -106,16 +106,16 @@ static CGFloat const kAnimationVelocity = 0.5f;
 
         UIToolbar *optionsMenuToolbar = self.optionsViewContainer.toolbar;
         self.officialButton = [[SBCaptionButton alloc] init];
-        self.officialButton.offImage = [UIImage imageNamed:@"sb_camera_official_off"];
-        self.officialButton.onImage = [UIImage imageNamed:@"sb_camera_official_on"];
+        self.officialButton.offImage = [UIImage imageNamed:@"sb_camera_official_off" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        self.officialButton.onImage = [UIImage imageNamed:@"sb_camera_official_on" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
         self.officialButton.on = NO;
         self.officialButton.imageView.contentMode = UIViewContentModeCenter;
         self.officialButton.captionLabel.text = @"Official";
         [optionsMenuToolbar addSubview:self.officialButton];
 
         self.exclusiveButton = [[SBCaptionButton alloc] init];
-        self.exclusiveButton.offImage = [UIImage imageNamed:@"sb_camera_exclusive_off"];
-        self.exclusiveButton.onImage = [UIImage imageNamed:@"sb_camera_exclusive_on"];
+        self.exclusiveButton.offImage = [UIImage imageNamed:@"sb_camera_exclusive_off" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        self.exclusiveButton.onImage = [UIImage imageNamed:@"sb_camera_exclusive_on" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
         self.exclusiveButton.imageView.contentMode = UIViewContentModeCenter;
         self.exclusiveButton.on = NO;
         self.exclusiveButton.captionLabel.text = @"Exclusive";
@@ -146,14 +146,14 @@ static CGFloat const kAnimationVelocity = 0.5f;
 
         //buttons
         self.acceptButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.acceptButton setImage:[[UIImage imageNamed:@"sb_camera_checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [self.acceptButton setImage:[[UIImage imageNamed:@"sb_camera_checkmark" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         self.acceptButton.tintColor = [UIColor colorWithRed:.078431373 green:.866666667 blue:.807843137 alpha:1];
         self.acceptButton.imageView.contentMode = UIViewContentModeCenter;
         self.acceptButton.backgroundColor = [UIColor whiteColor];
         [self addSubview:self.acceptButton];
 
         self.rejectButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.rejectButton setImage:[[UIImage imageNamed:@"sb_camera_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [self.rejectButton setImage:[[UIImage imageNamed:@"sb_camera_close" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         self.rejectButton.tintColor = [UIColor colorWithRed:1 green:.294117647 blue:.376470588 alpha:1];
         self.rejectButton.imageView.contentMode = UIViewContentModeCenter;
         self.rejectButton.backgroundColor = [UIColor whiteColor];
@@ -165,7 +165,7 @@ static CGFloat const kAnimationVelocity = 0.5f;
         CGPoint buttonOffset = CGPointMake(20, 20);
 
         self.drawButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.drawButton setImage:[UIImage imageNamed:@"sb_camera_draw_circle"] forState:UIControlStateNormal];
+        [self.drawButton setImage:[UIImage imageNamed:@"sb_camera_draw_circle" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
         self.drawButton.imageView.contentMode = UIViewContentModeCenter;
         [self addSubview:self.drawButton];
 
@@ -174,7 +174,7 @@ static CGFloat const kAnimationVelocity = 0.5f;
         [self.drawButton autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self withOffset:-buttonOffset.x];
 
         self.undoButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.undoButton setImage:[UIImage imageNamed:@"sb_camera_undo_circle"] forState:UIControlStateNormal];
+        [self.undoButton setImage:[UIImage imageNamed:@"sb_camera_undo_circle" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
         self.undoButton.imageView.contentMode = UIViewContentModeCenter;
         [self addSubview:self.undoButton];
 

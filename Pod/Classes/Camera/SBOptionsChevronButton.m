@@ -29,7 +29,7 @@
 
 - (void) initDefaults {
     [super initDefaults];
-    self.imageView.image = [UIImage imageNamed:@"sb_camera_arrow_down"];
+    self.imageView.image = [UIImage imageNamed:@"sb_camera_arrow_down" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
     self.imageView.contentMode = UIViewContentModeCenter;
     [self rotateToHidden:YES];
     [self addTarget:self action:@selector(pressed) forControlEvents:UIControlEventTouchUpInside];

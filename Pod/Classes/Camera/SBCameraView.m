@@ -115,7 +115,7 @@ BOOL isSmallScreen() {
     if (!_closeButton) {
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _closeButton.imageView.contentMode = UIViewContentModeCenter;
-        [_closeButton setImage:[UIImage imageNamed:@"sb_camera_close"] forState:UIControlStateNormal];
+        [_closeButton setImage:[UIImage imageNamed:@"sb_camera_close" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
         _closeButton.layer.masksToBounds = YES;
     }
     return _closeButton;
@@ -190,7 +190,7 @@ BOOL isSmallScreen() {
 - (UIButton*) chooseExistingButton {
     if (!_chooseExistingButton) {
         _chooseExistingButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_chooseExistingButton setImage:[UIImage imageNamed:@"sb_camera_existing"] forState:UIControlStateNormal];
+        [_chooseExistingButton setImage:[UIImage imageNamed:@"sb_camera_existing" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
         _chooseExistingButton.layer.masksToBounds = YES;
         _chooseExistingButton.imageView.contentMode = UIViewContentModeCenter;
     }
@@ -206,7 +206,7 @@ BOOL isSmallScreen() {
 - (UIButton*) nextButton {
     if (!_nextButton) {
         _nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_nextButton setImage:[UIImage imageNamed:@"sb_camera_arrow_right"] forState:UIControlStateNormal];
+        [_nextButton setImage:[UIImage imageNamed:@"sb_camera_arrow_right" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
         _nextButton.layer.masksToBounds = YES;
         _nextButton.imageView.contentMode = UIViewContentModeCenter;
     }
@@ -246,7 +246,7 @@ BOOL isSmallScreen() {
     if (!_toggleRatioButton) {
         _toggleRatioButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _toggleRatioButton.frame = CGRectMake(CGRectGetWidth(_bottomContainerView.bounds)/2 - 15.f, 15.f, 30.0, 30.0);
-        [_toggleRatioButton setImage:[UIImage imageNamed:@"sb_camera_ratio_16_9"] forState:UIControlStateNormal];
+        [_toggleRatioButton setImage:[UIImage imageNamed:@"sb_camera_ratio_16_9" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
         _toggleRatioButton.imageView.contentMode = UIViewContentModeCenter;
     }
     return _toggleRatioButton;
@@ -256,7 +256,7 @@ BOOL isSmallScreen() {
     if (!_toggleCameraButton) {
         _toggleCameraButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _toggleCameraButton.frame = CGRectMake(CGRectGetWidth(_bottomContainerView.bounds)/2 - 15.f, 15.f, 30.0, 30.0);
-        [_toggleCameraButton setImage:[UIImage imageNamed:@"sb_camera_flip"] forState:UIControlStateNormal];
+        [_toggleCameraButton setImage:[UIImage imageNamed:@"sb_camera_flip" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
         _toggleCameraButton.imageView.contentMode = UIViewContentModeCenter;
     }
     return _toggleCameraButton;
@@ -471,13 +471,13 @@ BOOL isSmallScreen() {
     
     switch (flashMode) {
         case SBCaptureFlashModeOn:
-            [_flashModeButton setImage:[UIImage imageNamed:@"sb_camera_flash_on"] forState:UIControlStateNormal];
+            [_flashModeButton setImage:[UIImage imageNamed:@"sb_camera_flash_on" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
             break;
         case SBCaptureFlashModeAuto:
-            [_flashModeButton setImage:[UIImage imageNamed:@"sb_camera_flash_auto"] forState:UIControlStateNormal];
+            [_flashModeButton setImage:[UIImage imageNamed:@"sb_camera_flash_auto" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
             break;
         default:
-            [_flashModeButton setImage:[UIImage imageNamed:@"sb_camera_flash_off"] forState:UIControlStateNormal];
+            [_flashModeButton setImage:[UIImage imageNamed:@"sb_camera_flash_off" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
             break;
     }
 }
@@ -489,8 +489,8 @@ BOOL isSmallScreen() {
     
     if (self.captureType == SBCaptureTypeVideo) {
         switch (aspectRatio) {
-            case SBCameraAspectRatioSquare: [_toggleRatioButton setImage:[UIImage imageNamed:@"sb_camera_ratio_1_1"] forState:UIControlStateNormal]; break;
-            default: [_toggleRatioButton setImage:[UIImage imageNamed:@"sb_camera_ratio_16_9"] forState:UIControlStateNormal]; break;
+            case SBCameraAspectRatioSquare: [_toggleRatioButton setImage:[UIImage imageNamed:@"sb_camera_ratio_1_1" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal]; break;
+            default: [_toggleRatioButton setImage:[UIImage imageNamed:@"sb_camera_ratio_16_9" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal]; break;
         }
     }
     
